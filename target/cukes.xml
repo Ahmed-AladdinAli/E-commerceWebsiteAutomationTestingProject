@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="237.178">
+<testcase classname="F1_Register| users could register with new accounts" name="Guest user could register with new accounts" time="19.523">
+<system-out><![CDATA[Given user is navigating to register page...................................passed
+When user is selecting  gender type.........................................passed
+And user is entering firstName "automation" and lastName "tester"...........passed
+And user enter date of birth................................................passed
+And user enter email "test@example.com" field...............................passed
+And user enter company name "MicroSoft".....................................passed
+And user fills password fields "P@sswOrd" and "P@sswOrd"....................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+And the color is as specified...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="users could use login functionality to use their accounts." name="user could login with valid email and password." time="12.696">
+<system-out><![CDATA[Given user is navigating to login page......................................passed
+When user logging with valid data "test@example.com" and "P@sswOrd".........passed
+And user is pressing on login button........................................passed
+Then user is logging to system successfully.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="users could use login functionality to use their accounts." name="user could login with invalid email and password" time="13.616">
+<system-out><![CDATA[Given user is navigating to login page for TC2 negative scenario............passed
+When user logging with invalid data "wrong@example.com" and "P@sswOrd"......passed
+And user is pressing on login button for TC2 negative scenario..............passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="the user will change the currency throughout the page using" name="the user could change the currency through out the page using" time="11.817">
+<system-out><![CDATA[When user is selecting Euro currency from the dropdown list on the top left of home page.passed
+Then the 4 products in the home page will show Euro symbol..................passed
+]]></system-out>
+</testcase>
+<testcase classname="the user could login using a social networking site" name="user could search for items using products Name" time="11.927">
+<system-out><![CDATA[When user is entering the searching data as book............................passed
+Then the products will be shown.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="the user could login using a social networking site" name="user could search for items using products Name 2" time="11.437">
+<system-out><![CDATA[When user is entering the searching data as laptop..........................passed
+Then the products will be shown.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="the user could login using a social networking site" name="user could search for items using products Name 3" time="12.015">
+<system-out><![CDATA[When user is entering the searching data as nike............................passed
+Then the products will be shown.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="the user could login using a social networking site" name="user could search for items using products serial number" time="12.018">
+<system-out><![CDATA[When user is entering searching data as SCI_FAITH...........................passed
+Then products will be shown.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="the user could login using a social networking site" name="user could search for items using products serial number 2" time="11.975">
+<system-out><![CDATA[When user is entering searching data as APPLE_CAM...........................passed
+Then products will be shown.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="the user could login using a social networking site" name="user could search for items using products serial number 3" time="11.384">
+<system-out><![CDATA[When user is entering searching data as SF_PRO_11...........................passed
+Then products will be shown.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="the user should be able to hover on main categories in home page" name="the user select a main category from the home page , hover on it" time="11.59">
+<system-out><![CDATA[When user hover on a main category..........................................passed
+And user clicks on a subCategory............................................passed
+Then user is navigating to the right page...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="the sliders on the homepage are clickable and direct user to the right page" name="user is clicking the first slider on the homePage successfully" time="10.447">
+<failure message="The following asserts failed:&#10;&#9;user directed to wrong page  expected [https://demo.nopcommerce.com/] but found [https://demo.nopcommerce.com/nokia-lumia-1020]" type="java.lang.AssertionError"><![CDATA[When user is clicking on the first slider in the homePage...................passed
+Then user is navigating to the right page sc1...............................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	user directed to wrong page  expected [https://demo.nopcommerce.com/] but found [https://demo.nopcommerce.com/nokia-lumia-1020]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D06_HomeSlidersStepDefinition.user_is_navigating_to_the_right_page_sc1(D06_HomeSlidersStepDefinition.java:32)
+	at ✽.user is navigating to the right page sc1(file:///F:/month%20tasks/E-commerce%20Automation%20project/src/main/resources/features/F06_HomeSliders.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="the sliders on the homepage are clickable and direct user to the right page" name="user is clicking the second slider on the homePage successfully" time="10.688">
+<failure message="The following asserts failed:&#10;&#9;user directed to wrong page  expected [https://demo.nopcommerce.com/] but found [https://demo.nopcommerce.com/iphone-6]" type="java.lang.AssertionError"><![CDATA[When user is clicking on the second slider in the homePage..................passed
+Then user is navigating to the right page TC6 sc2...........................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	user directed to wrong page  expected [https://demo.nopcommerce.com/] but found [https://demo.nopcommerce.com/iphone-6]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D06_HomeSlidersStepDefinition.user_is_navigating_to_the_right_page_TC6_sc2(D06_HomeSlidersStepDefinition.java:47)
+	at ✽.user is navigating to the right page TC6 sc2(file:///F:/month%20tasks/E-commerce%20Automation%20project/src/main/resources/features/F06_HomeSliders.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="user can follow the company on different websites" name="user is clicking on facebook button and directed to facebook page of the company" time="10.454">
+<system-out><![CDATA[When user is clicking on facebook icon......................................passed
+Then user is directed to company facebook page..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can follow the company on different websites" name="user is clicking on twitter button and directed to twitter page of the company" time="10.973">
+<system-out><![CDATA[When user is clicking on twitter icon.......................................passed
+Then user is directed to company twitter page...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can follow the company on different websites" name="user is clicking on rrs button and directed to rss page of the company" time="11.246">
+<system-out><![CDATA[When user is clicking on rss icon...........................................passed
+Then user is directed to company rss page...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can follow the company on different websites" name="user is clicking on youtube button and directed to youtube page of the company" time="10.413">
+<system-out><![CDATA[When user is clicking on youtube icon.......................................passed
+Then user is directed to company youtube page...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can add products to his wishList when clicking heart icon" name="user adds a product to his wishlist and receiving a success message" time="18.278">
+<system-out><![CDATA[Given user is navigating to register page for TC8 sc1.......................passed
+And user is selecting  gender type for TC8 sc1..............................passed
+And user is entering firstName "automation" and lastName "tester" for TC8 sc1.passed
+And user enter date of birth for TC8 sc1....................................passed
+And user enter email "test@example.com" field for TC8 sc1...................passed
+And user enter company name "MicroSoft" for TC8 sc1.........................passed
+And user fills password fields "P@sswOrd" and "P@sswOrd" for TC8 sc1........passed
+And user clicks on register button for TC8 sc1..............................passed
+And user is navigating to home page after registration for TC8 sc1..........passed
+And user is navigating to login page for TC8 sc1............................passed
+And user logging with valid data "test@example.com" and "P@sswOrd" for TC8 sc1.passed
+When user is clicking on heart icon.........................................passed
+Then a success message appears..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can add products to his wishList when clicking heart icon" name="user wishlist page contains the true information about his wishlist" time="14.126">
+<system-out><![CDATA[Given user is navigating to login page for TC8 sc2..........................passed
+And user logging with valid data "test@example.com" and "P@sswOrd" for TC8 sc2.passed
+And user is navigating to wishlist page.....................................passed
+When user is checking the number of items wished in the table...............passed
+Then quantity value should be larger than 0.................................passed
+]]></system-out>
+</testcase>
+</testsuite>
